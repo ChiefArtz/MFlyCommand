@@ -65,7 +65,7 @@ class FlyCommand extends PluginBase implements Listener {
         if ($sd->hasPermission("flycommand.fly")){
           if ($sd instanceof Player) {
             if (!isset($this->flying[$sd->getName()])){
-              $sd->sendMessage($this->getPrefix().MF::GREEN."You have now flying enabled");
+              $sd->sendMessage($this->getPrefix().MF::GREEN."You are now flying!");
               $sd->setAllowFlight(true);
               $field = [$sd->getName() => $sd->getName()];
               $this->flying = \array_merge($field,$this->flying);
